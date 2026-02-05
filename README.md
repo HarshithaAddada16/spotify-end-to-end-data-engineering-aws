@@ -1,6 +1,6 @@
 # spotify-end-to-end-data-engineering-aws
 
-## 🎵 Spotify Top 10 Data Engineering Pipeline
+## 🎵 Spotify Data Engineering Pipeline
 
 ## 🚀Project Overview
 
