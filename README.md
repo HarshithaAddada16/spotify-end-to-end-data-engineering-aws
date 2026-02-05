@@ -18,30 +18,44 @@ The pipeline consists of three main stages: Extraction, Transformation, and Load
 **Extraction Stage**
 
 Spotify API: Fetches Top 10 playlist data daily
-AWS Lambda: Handles extraction serverlessly
+
+AWS Lambda: Handles extraction 
+
 Amazon CloudWatch: Triggers the Lambda function every 24 hours
+
 Amazon S3: Stores raw JSON files
 
 **Transformation Stage**
 
 Processes raw JSON into structured datasets using Pandas
-Creates separate tables for:
+
+Created separate tables for:
+
 Songs: ID, name, duration, popularity, album, artist
+
 Albums: ID, name, release date, total tracks
+
 Artists: ID, name, profile links
+
 Ensures data is clean, deduplicated, and query-ready
+
 Saves transformed CSV files back to S3
 
 **Load & Analysis Stage**
 
 AWS Glue Crawler: Infers table schema automatically
+
 AWS Glue Data Catalog: Manages metadata for easy querying
+
 Amazon Athena: Queries datasets directly in the cloud
 
 **✨ Key Highlights**
 
 Automated Daily ETL: Pipeline updates every 24 hours
+
 Clean, Structured Data: Ready for analysis of songs, albums, and artists
+
 Serverless & Scalable: Fully cloud-native using AWS Lambda, S3, Glue, and Athena
+
 Metadata Management: Glue Crawler detects schema automatically, simplifying analytics
 
