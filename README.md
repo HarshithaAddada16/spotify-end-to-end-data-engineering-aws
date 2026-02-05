@@ -1,13 +1,12 @@
 # spotify-end-to-end-data-engineering-aws
-Track, transform, and analyze Spotify Top 10 songs daily with a serverless AWS ETL pipeline.
 
-**🎵 Spotify Top 10 Data Engineering Pipeline**
+**##🎵 Spotify Top 10 Data Engineering Pipeline**
 
-**🚀Project Overview**
+**##🚀Project Overview**
 
 This project is a fully automated ETL pipeline that tracks Spotify’s Top 10 Global songs every 24 hours. The pipeline begins by connecting to Spotify’s API to extract live playlist data. Once the data is pulled, it undergoes cleaning, normalization, and structuring to produce organized datasets for songs, albums, and artists. These processed datasets are stored in Amazon S3, allowing for seamless cloud-based analytics. The main goal of the project is to build a serverless, scalable workflow that delivers fresh, structured data every day without requiring any manual intervention.
 
-**🏗 ETL Pipeline Flow**
+**##🏗 ETL Pipeline Flow**
 
 Architecture diagram of the serverless Spotify Top 10 ETL pipeline
 
@@ -15,7 +14,7 @@ Architecture diagram of the serverless Spotify Top 10 ETL pipeline
 
 The pipeline consists of three main stages: Extraction, Transformation, and Load & Analysis.
 
-**Extraction Stage**
+###**Extraction Stage**
 
 Spotify API: Fetches Top 10 playlist data daily
 
@@ -25,7 +24,7 @@ Amazon CloudWatch: Triggers the Lambda function every 24 hours
 
 Amazon S3: Stores raw JSON files
 
-**Transformation Stage**
+###**Transformation Stage**
 
 Processes raw JSON into structured datasets using Pandas
 
@@ -41,7 +40,7 @@ Ensures data is clean, deduplicated, and query-ready
 
 Saves transformed CSV files back to S3
 
-**Load & Analysis Stage**
+###**Load & Analysis Stage**
 
 AWS Glue Crawler: Infers table schema automatically
 
@@ -49,7 +48,7 @@ AWS Glue Data Catalog: Manages metadata for easy querying
 
 Amazon Athena: Queries datasets directly in the cloud
 
-**✨ Key Highlights**
+##**✨ Key Highlights**
 
 Automated Daily ETL: Pipeline updates every 24 hours
 
